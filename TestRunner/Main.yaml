@@ -6,13 +6,14 @@ tags:
 
 onFlowStart:
   - runScript: ../Resources/Credentials.js
-  - runFlow: ../Functions/Onboarding/Login.yaml
 ---
 - launchApp:
-    clearState: true
+    clearState: false
     permissions:
       all: unset
 
 
 # Carousel screen
+- runFlow: ../Functions/Onboarding/Login.yaml
+- runFlow: ../Functions/Onboarding/Profile.yaml
 - runFlow: ../Functions/Onboarding/Logout.yaml

@@ -1,0 +1,18 @@
+appId: ${APP_ID}
+---
+
+# Navigate to profile.
+- tapOn: "Settings"
+- tapOn:
+    id: "chevron_right_large"
+
+# Validate the logged In emailId present on the screen or not.
+- runFlow:
+    when:
+      notVisible: ${output.password}
+    commands:
+        - evalScript: ${console.log('The email address you entered doesn't match the one currently logged in.')}
+
+# Go back to Settings tab.
+- tapOn:
+    id: "anywhere_back"
