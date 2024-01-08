@@ -1,0 +1,7 @@
+appId: ${APP_ID}
+---
+
+# Logout Flow
+- tapOn: "Settings"
+- tapOn: "Log out"
+- tapOn: "Yes, log out"

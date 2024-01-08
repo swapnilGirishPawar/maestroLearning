@@ -1,0 +1,7 @@
+appId: ${APP_ID}
+---
+# Validate important buttons on page.
+- assertVisible: "Login to your account."
+- assertVisible: "Continue with Email"
+- assertVisible: "Continue with Apple"
+- assertVisible: "Don’t have account yet? Create an account."

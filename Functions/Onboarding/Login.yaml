@@ -1,0 +1,18 @@
+appId: ${APP_ID}
+---
+
+- assertVisible: "Continue with Email"
+
+# If All buttons present then start with Login Flow
+- tapOn: "Continue with Email"
+- tapOn:
+    text: Email
+- inputText: "${output.email}"
+- tapOn:
+    text: Password
+- inputText: "${output.password}"
+- tapOn:
+    text: Log in
+
+- tapOn:
+    text: Not Now

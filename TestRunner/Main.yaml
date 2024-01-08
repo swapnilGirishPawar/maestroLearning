@@ -1,0 +1,18 @@
+appId: ${APP_ID}
+name: Get Started
+tags:
+  - onboard
+  - smoke
+
+onFlowStart:
+  - runScript: ../Resources/Credentials.js
+  - runFlow: ../Functions/Onboarding/Login.yaml
+---
+- launchApp:
+    clearState: true
+    permissions:
+      all: unset
+
+
+# Carousel screen
+- runFlow: ../Functions/Onboarding/Logout.yaml
